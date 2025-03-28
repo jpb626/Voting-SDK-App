@@ -6,6 +6,7 @@ import {
   handleRemoveDroppedAssetsByUniqueName,
   handleGetWorldDetails,
   handleUpdateWorldDataObject,
+  handleUpdatePoll,
 } from "./controllers/index.js";
 import { getVersion } from "./utils/getVersion.js";
 
@@ -34,6 +35,7 @@ router.get("/system/health", (req, res) => {
 router.post("/dropped-asset", handleDropAsset);
 router.get("/dropped-asset", handleGetDroppedAsset);
 router.post("/remove-dropped-assets", handleRemoveDroppedAssetsByUniqueName);
+router.put("/updatePoll", handleUpdatePoll);
 
 // Visitor
 router.get("/visitor", handleGetVisitor);
