@@ -10,7 +10,7 @@ export const handleUpdatePoll = async (req: Request, res: Response) => {
     const { question, answer1, answer2, answer3, answer4, answer5, displayMode } = req.body;
 
     const droppedAsset = await getDroppedAsset(credentials);
-    await initializeDroppedAssetDataObject(droppedAsset);
+    // await initializeDroppedAssetDataObject(droppedAsset);
     // const dataObject = await droppedAsset.fetchDataObject();
 
     const lockId = `${assetId}-pollUpdate-${new Date(Math.round(new Date().getTime() / 10000) * 10000)}`;

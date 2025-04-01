@@ -7,6 +7,8 @@ import {
   handleGetWorldDetails,
   handleUpdateWorldDataObject,
   handleUpdatePoll,
+  handleGetUpdatePoll,
+  handleVote,
 } from "./controllers/index.js";
 import { getVersion } from "./utils/getVersion.js";
 
@@ -36,6 +38,8 @@ router.post("/dropped-asset", handleDropAsset);
 router.get("/dropped-asset", handleGetDroppedAsset);
 router.post("/remove-dropped-assets", handleRemoveDroppedAssetsByUniqueName);
 router.put("/updatePoll", handleUpdatePoll);
+router.get("/updatePoll", handleGetUpdatePoll);
+router.post("/vote", handleVote);
 
 // Visitor
 router.get("/visitor", handleGetVisitor);
